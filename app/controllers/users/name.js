@@ -1,8 +1,8 @@
 import Ember from 'ember';
 import { task, timeout } from 'ember-concurrency';
 
-const DEBOUNCE_MS = 1000;
-const GITHUB_TOKEN = "fbd98cf9087bdeed96a190b227347046a17d3a9c";
+const DEBOUNCE_MS = 2000;
+const GITHUB_TOKEN = "<PUT A VALID GITHUB TOKEN HERE>";
 
 export default Ember.Controller.extend({
 
@@ -25,4 +25,10 @@ export default Ember.Controller.extend({
       xhr.abort();
     }
   }),
+
+  actions: {
+    cancel() {
+      this.get("loadRepo").cancelAll();
+    }
+  }
 });

@@ -19,6 +19,9 @@
     {{#if loadRepo.isRunning}}
 
       {{load-ing}}
+      <button onclick={{action "cancel"}} type="button" class="alert button">
+        Cancel
+      </button>
 
     {{else}}
 
