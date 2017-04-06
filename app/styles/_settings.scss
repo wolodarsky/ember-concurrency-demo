@@ -46,15 +46,15 @@
 // 1. Global
 // ---------
 
-$global-font-size: 100%;
+$global-font-size: 90%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #1779ba,
-  secondary: #767676,
+  primary: #2199e8,
+  secondary: #777,
   success: #3adb76,
   warning: #ffae00,
-  alert: #cc4b37,
+  alert: #ec5840,
 );
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
@@ -539,14 +539,14 @@ $switch-paddle-transition: all 0.25s ease-out;
 
 // 32. Table
 // ---------
-
+$lightened-hover: lighten(#E26656, 10%);
 $table-background: $white;
 $table-color-scale: 5%;
 $table-border: 1px solid smart-scale($table-background, $table-color-scale);
 $table-padding: rem-calc(8 10 10);
 $table-hover-scale: 2%;
-$table-row-hover: darken($table-background, $table-hover-scale);
-$table-row-stripe-hover: darken($table-background, $table-color-scale + $table-hover-scale);
+$table-row-hover: darken($lightened-hover, $table-hover-scale);
+$table-row-stripe-hover: darken($lightened-hover, $table-color-scale + $table-hover-scale);
 $table-is-striped: true;
 $table-striped-background: smart-scale($table-background, $table-color-scale);
 $table-stripe: even;
@@ -572,7 +572,7 @@ $tab-item-padding: 1.25rem 1.5rem;
 $tab-expand-max: 6;
 $tab-content-background: $white;
 $tab-content-border: $light-gray;
-$tab-content-color: $body-font-color;
+$tab-content-color: foreground($tab-background, $primary-color);
 $tab-content-padding: 1rem;
 
 // 34. Thumbnail
@@ -588,9 +588,9 @@ $thumbnail-radius: $global-radius;
 // 35. Title Bar
 // -------------
 
-$titlebar-background: $black;
-$titlebar-color: $white;
-$titlebar-padding: 0.5rem;
+$titlebar-background: $white;
+$titlebar-color: $black;
+$titlebar-padding: 1rem;
 $titlebar-text-font-weight: bold;
 $titlebar-icon-color: $white;
 $titlebar-icon-color-hover: $medium-gray;
@@ -615,6 +615,6 @@ $tooltip-radius: $global-radius;
 $topbar-padding: 0.5rem;
 $topbar-background: $light-gray;
 $topbar-submenu-background: $topbar-background;
-$topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
+$topbar-title-spacing: 1rem;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
