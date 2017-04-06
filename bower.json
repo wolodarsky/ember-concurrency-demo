@@ -1,5 +1,6 @@
 {
   "name": "concurrency-demo",
   "dependencies": {
+    "foundation-sites": "^6.2.4"
   }
 }
